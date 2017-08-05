@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Restaurant app';
+  words = [];
+
+  constructor() {
+    for (let i = 0; i < 5; i++) {
+      let val = {
+        'title': 'this is a title header',
+        'description': 'this is the header paragraph '
+      };
+      val.description += i;
+      if (i === 0) {
+        val.description += ' and kyle really smells like dog buns';
+      }
+      this.words.push(val);
+    }
+  }
+
 }
